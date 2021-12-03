@@ -1,21 +1,22 @@
 import React, { Component } from "react";
-import { render } from 'react-dom'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PaginaHome from "./Componentes/PaginaHome";
 import Prim from "./Componentes/Prim";
+import NavBar from "./Componentes/Navbar";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-    <Router>
-     <Routes>
+       <NavBar> </NavBar>
+      
+       <Switch>
 
-       <Route exact path="/" element={<PaginaHome/>}/>
-       <Route exact path="/prim" element={<Prim/>}/>
-    
-       </Routes>
-    </Router>
+          <Route exact path="/" exact component={PaginaHome}></Route>
+          <Route exact path="/prim" component={Prim} />
+
+      </Switch>
+   
     </div>
   );
 }
