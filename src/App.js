@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PaginaHome from "./Componentes/PaginaHome";
 import Prim from "./Componentes/Prim";
 import NavBar from "./Componentes/Navbar";
+import Footer from "./Componentes/Footer";
 import './App.css';
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
           <Route exact path="/prim" component={Prim} />
 
       </Switch>
-   
+       <Footer></Footer>
     </div>
   );
 }
